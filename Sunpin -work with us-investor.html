@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+      <title>Sunpin Solar</title>
+      <style>
+         * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+         }
+         body {
+          font-family:sans-serif;
+          background: white;
+          color: black;
+         }
+         .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            padding: 15px 30px;
+            border-bottom: 2px solid #ddd;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+         }
+         .logo img {
+         height: 50px;
+         }
+         .menu {
+            display: flex;
+            list-style: none;
+         }
+         .menu li {
+            position: relative;
+            margin: 0 20px;
+         }
+         .menu a {
+            text-decoration: none;
+            color: #FF5E14;
+            padding: 10px;
+            display: block;
+            font-size: 16px;
+            transition: color 0.3s;
+            font-weight: 700;
+         }
+         .menu a:hover {
+            color: #FF5E14;
+         }
+         .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            list-style: none;
+            width: 250px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            background-color: #0071BC;
+         }
+
+         .submenu li {
+            width: 100%;
+         }
+
+         .submenu a {
+            color: #ffff;
+            display: block;
+         }
+         
+         .menu li:hover .submenu {
+            display: block;
+         }
+
+         .our-services-img{
+            display: flex;
+            padding-top: 50px;
+         }
+
+         /*Connect with an expert*/
+         .btn-transparent-white {
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 1.5rem;
+            padding: 1rem 1.5rem;
+            word-break: break-word;
+            border: 1px solid #ffffff;
+            border-radius: 30px;
+            background-color: #FF5E14;
+            color: #ffffff;
+         }
+
+         .btn-transparent-white:hover {
+          color: #ffffff;
+          text-decoration: none;
+          background-color: #0071BC;
+         }
+         .connect-with-expert{
+            display: flex;
+            justify-content: center;
+         }
+
+         .landowner-partnerships{
+            position: absolute;
+            top:180px;
+            left: 150px;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 45px;
+            animation-name: custom-brokerage-animation;
+            animation-duration: 4s;
+         }
+
+         .development-process{
+            width:100%;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            padding: 30px;
+         }
+
+         .sunpin-img {
+            padding: 50px;
+            margin-left: 100px;
+         }
+
+         .trade-img{
+            width: auto;
+            height: 500px;
+         }
+
+         .sunpin-intro{
+            padding: 50px;
+         }
+
+         .sunpin-intro ul{
+            list-style-type: none;
+         }
+
+         .sunpin-intro h2{
+            font-weight: bold;
+            color:#FF5E14;
+         }
+
+         .sunpin-intro li{
+            margin: 20px 0px;
+            color:#4F4F4F;
+            font-size: 20px;
+         }
+
+         .fa-arrow-right{
+            color: #FF5E14;
+         }
+
+          /* About us Start */
+         .about-us{
+         width: 100%;
+         height: auto;
+         background-color:#003057;
+         }
+
+         .about-us h4{
+         color: #FF5E14;
+         text-align: center;
+         font-weight: bold;
+         }
+
+         .about-us h2{
+         color: #FF5E14;
+         text-align: center;
+         font-weight: bold;
+         }
+
+         .about-detail{
+            display: flex;
+            justify-content: center;
+         }
+
+         @keyframes custom-brokerage-animation {
+            25%  {left:200px; top:0px;}
+         }
+
+         .our-detail{
+            width: 18%;
+            height: auto;
+            border-color: #ffffff;
+            border-style: solid;
+            border-width: thin;
+            justify-content:left;
+            color: #ffffff;
+            margin: 30px;
+         }
+         
+         .our-detail ul{
+            list-style: none;
+         }
+         .our-detail li{
+            padding: 5px 14px;
+         }
+
+         .our-detail h3{
+            text-decoration-color:#FF5E14;
+            text-underline-position: under;
+            text-decoration-thickness: 5px;
+            display: flex;
+            justify-content: center;
+         }
+
+         .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 28px;
+         }
+
+         .footer {
+            background-color: #0099cc;
+            color: #ffffff;
+            text-align: center;
+            font-size: 12px;
+            padding: 15px;
+         }
+         @media (max-width: 900px) {
+            .menu {
+               display: none;
+               flex-direction: column;
+               position: absolute;
+               top: 70px;
+               left: 0;
+               width: 100%;
+               background: #ffff;
+               color: #ffff;
+            }
+            .menu.active {
+               display: flex;
+            }
+            .menu li {
+               text-align: center;
+               width: 100%;
+               margin: 0;
+               padding: 15px;
+               border-bottom: 1px solid #ddd;
+            }
+            .submenu {
+               position: relative;
+               top: 0;
+               width: 100%;
+               background: #f9f9f9;
+            }
+            .submenu a {
+               color: #4F4F4F;
+            }
+            .hamburger {
+               display: block;
+            }
+            .ulandowner-partnerships{
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               font-size: 30px;
+               transform: translate(-50%, -50%);
+            }
+
+            .development-process{
+               width:100%;
+               height: 50%;
+               display: block;
+            }
+
+            .trade-img {
+               width: auto;
+               max-width: 900px;
+               height: auto;
+            }
+
+            .about-detail{
+               display: block;
+            }
+         }
+         /* Add these media queries at the end of existing styles */
+         @media (max-width: 1200px) {
+            .logo img {
+               width: 250px;
+               height: auto;
+            }
+            .menu li {
+               margin: 0 15px;
+            }
+            .ourserviceimg{
+               display: none;
+            }
+
+            .development-process{
+               width:100%;
+               height: 50%;
+               display: block;
+            }
+
+            .trade-img {
+               width: auto;
+               max-width: 1200px;
+               height: auto;
+            }
+         }
+         @media (max-width: 768px) {
+            .navbar {
+               padding: 15px 20px;
+            }
+            .logo img {
+               width: 200px;
+            }
+            .development-process{
+               width:100%;
+               height: 50%;
+               display: block;
+            }
+
+            .trade-img {
+               width: auto;
+               max-width: 768px;
+               height: auto;
+            }
+         }
+         @media (max-width: 576px) {
+            .logo img {
+               width: 180px;
+            }
+            /* Connect Button */
+            .connect-with-expert {
+               padding-left: 0 !important;
+            }
+
+            .ourserviceimg{
+               display: none;
+            }
+            .development-process{
+               width:100%;
+               height: 50%;
+               display: block;
+            }
+
+            .trade-img {
+               width: auto;
+               max-width: 576px;
+               height: auto;
+            }
+         }
+      </style>
+   </head>
+   <body>
+      <div class="main" style="display: block;">
+         <nav class="navbar">
+            <div class="logo">
+               <img src="./logo.png" style="width: 300px;height: 100px;" alt="Sunpin Solar Logo">
+            </div>
+            <div class="hamburger">&#9776;</div>
+            <ul class="menu">
+               <li>
+                  <a href="#">Home</a>
+               </li>
+               <li>
+                  <a href="#">
+                  About Us
+                  <span>▼</span>
+                  </a>
+                  <ul class="submenu">
+                     <li>
+                        <a href="#">
+                        Our Organization
+                        </a>
+                     </li>
+                     <li>
+                        <a href="#">
+                        Leadership & Team
+                        </a>
+                     </li>
+                     <li>
+                        <a href="#">
+                        Join Our Team
+                        </a>
+                     </li>
+                     <li>
+                        <a href="#">
+                        Our Commitment
+                        </a>
+                     </li>
+                  </ul>
+               </li>
+               <li>
+                  <a href="#">
+                  Work with us<span>▼</span>
+                  </a>
+                  <ul class="submenu">
+                     <li>
+                        <a href="#">
+                        Landowner Partnerships
+                        </a>
+                     </li>
+                     <li>
+                        <a href="#">
+                        Energy Solutions for Businesses
+                        </a>
+                     </li>
+                     <li>
+                        <a href="#">
+                        Investment Opportunities
+                        </a>
+                     </li>
+                  </ul>
+               </li>
+               <li>
+                  <a href="#">Our Projects</a>
+               </li>
+               <li>
+                  <a href="#">Recent News & Blog</a>
+               </li>
+               <li>
+                  <div class="connect-with-expert;padding-left: 100px;">
+                     <a style="cursor: pointer;color: #ffffff;" class="btn-transparent-white" onclick="connectExpert()">Connect with us</a>
+                  </div>
+               </li>
+            </ul>
+         </nav><br><br><br><br><br>
+         <div id="demo" class="carousel slide" data-ride="carousel">
+            <img src="./convergrid-conversion-convergency-converters-16.jpg" height="500" style="width: 100%;height: 400px;">
+            <div class="landowner-partnerships">
+               Investment Opportunities
+            </div>
+         </div>
+
+         <!-- Development Process Start-->
+         <div class="development-process">
+            <div class="sunpin-img">
+              <img src="./cad1-25-825x510.jpeg" class="trade-img">
+            </div>
+            <div class="sunpin-intro">
+              <h2>
+                  Invest in Both Profitability and Sustainability
+              </h2>
+              <ul>
+                <li>
+                  <i class="fa fa-arrow-right"></i>
+                     Sunpin Solar is a financially robust solar project developer and energy asset owner, known for our strong track record in project execution. 
+                     We not only develop solar projects but also retain ownership and operational control alongside our partners. 
+                     Through our extensive network of origination partners, we provide development and financial support for numerous solar projects each month. 
+                     Additionally, we offer host customers the opportunity to transition to solar energy through a virtual Power Purchase Agreement (PPA).
+                </li>
+              </ul>
+              <h2>
+                  The Solar Tax Equity Investment Opportunity
+              </h2>
+              <ul>
+                <li>
+                  <i class="fa fa-arrow-right"></i>
+                  Solar tax equity investments provide a unique opportunity for investors to benefit from significant tax incentives while supporting the growth of renewable energy. 
+                  Through these investments, tax equity partners can leverage federal tax credits, such as the Investment Tax Credit (ITC), to offset their tax liabilities.
+                  These investments not only offer strong financial returns but also play a key role in accelerating the adoption of clean energy. 
+                  Sunpin facilitates these opportunities by offering turnkey, shovel-ready solar projects, enabling investors to capitalize on both tax benefits and the long-term growth potential of the solar market.
+              </ul>
+            </div>
+          </div>
+          <!-- Development Process End-->
+
+          <!--About us Start-->
+         <div class="about-us">
+            <br>
+            <h2>
+               Our Projects Ensure Guaranteed Returns
+            </h2>
+            <br>
+            <div class="connect-with-expert">
+               <a style="cursor: pointer;" class="btn-transparent-white" onclick="connectExpert()">Connect with us</a>
+            </div>
+            <div class="about-detail">
+               <div class="our-detail">
+                  <ul>
+                     <li>
+                        <h3>
+                           Pre-Vetted Projects with Feasibility and Impact Studies
+                        </h3>
+                     </li>
+                     <li>
+                        <i class="fa fa-arrow-right"></i>
+                        Our solar projects are thoroughly pre-vetted, backed by completed feasibility, impact, and facilities studies. 
+                        This ensures that each project is optimized for success, minimizing risks and maximizing returns for our investors.
+                     </li>
+                  </ul>
+               </div>
+               <div class="our-detail">
+                  <ul>
+                     <li>
+                     <h3>
+                        Fully Approved with Necessary Reviews Completed
+                     </h3>
+                     </li>
+                     <li>
+                        <i class="fa fa-arrow-right"></i>
+                        Our projects are approved by all state and local authorities, with ecological, historical, archaeological, and conservation reviews completed.
+                     </li>
+                  </ul>
+               </div>
+               <div class="our-detail">
+                  <ul>
+                     <li>
+                        <h3>
+                           Shovel-Ready with All Permits and Approvals Secured
+                        </h3>
+                     </li>
+                     <li>
+                        <i class="fa fa-arrow-right"></i>
+                        Our projects are shovel-ready, with all necessary permits and approvals secured, ensuring a smooth and efficient transition from development to construction. 
+                        This streamlined process allows for faster project execution and quicker returns on investment.
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <!--About us end-->
+      </div>
+      <div class="footer">
+         <p>© Copyright 2023 - 2028 Sunpin Solar Inc.All rights reserved.</p>
+       </div>
+   </body>
+</html>

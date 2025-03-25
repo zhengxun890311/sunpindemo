@@ -111,11 +111,32 @@
          display: flex;
          justify-content: center;
          }
+
+         .container {
+            position: relative;
+            width: auto;
+            margin: 0 auto;
+         }
+
+         .container img {
+            vertical-align: middle;
+         }
+
+         .container .content {
+            position: absolute;
+            bottom: 0;
+            background: rgb(0, 0, 0); /* Fallback color */
+            background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+            color: #f1f1f1;
+            width: 95%;
+            padding: 20px;
+         }
+
          /*Connect with an expert*/
          .hamburger {
-         display: none;
-         cursor: pointer;
-         font-size: 28px;
+            display: none;
+            cursor: pointer;
+            font-size: 28px;
          }
          @media (max-width: 900px) {
          .menu {
@@ -356,98 +377,52 @@
             </ul>
          </nav>
          <div>
-            <img src="./timthumb.jpg" style="width: 100%;margin-top: 100px;">
+            <img src="./large-field-solar-panels-is-illuminated-by-sun_35642-2197.avif" style="width: 100%;height: 400px;margin-top: 100px;">
          </div>
          <!-- Who We Are Start-->
          <div style="width: 100%;display: flex;padding-left: 100px;padding-top: 100px;">
             <div style="width: 49%;display: block;">
-               <h2 style="color:#FF5E14 ;font-size: 35px;font-weight: bold;">
-                  Who We Are
-               </h2>
-               <h2 style="color:#121C45 ;font-size: 35px;">
-                  Sunpin Solar is a seasoned clean energy solutions provider headquartered in California.
+               <h2 style="color:#0071BC ;font-size: 35px;font-weight: bold;">
+                  About Sunpin Solar
                </h2>
                <p style="padding-top: 20px;color:#4F4F4F;font-size: 20px;">
-                  Sunpin Solar advances a sustainable future through global solar energy development and  
-                  investment.Specializing in utility-scale projects, the company focuses on acquisition, development, and financing.
+                  Sunpin Solar is a premier solar energy development and investment firm specializing in the acquisition, development, and financing of utility-scale solar projects worldwide. 
+                  Headquartered in Irvine, California, Sunpin Solar excels in project development, asset management, financing, engineering, procurement, construction management, and operations of commercial and utility-scale photovoltaic solar plants.
                </p>
                <p style="padding-top: 20px;color:#4F4F4F;font-size: 20px;">
-                  Sunpin Solar through strategic partnerships with landowners, building owners, and investors, is dedicated to delivering the most efficient and 
-                  cost-effective clean energy solutions for businesses, corporations, utilities, and communities worldwide.
+                  Founded in 2012, Sunpin Solar has rapidly established itself as a leader in the utility-scale solar industry. 
+                  Recognized as one of the Top Five Solar Companies in the United States, our team of innovative and experienced professionals has the expertise and determination to turn ambitious projects into reality.
                </p>
             </div>
             <div style="width: 48%;">
                <img class="ourserviceimg" src="./logo.png" alt="Sunpin Solar Logo">
             </div>
-         </div>
+         </div><br><br>
          <!-- Who We Are End-->
-         <!-- Our Services Start-->
-         <div class="our-services-img">
-            <div style="display: flex;justify-content: center;">
-               <div style="width: 45%;height: 85%;">
-                  <img class="ourserviceimg" style="width: 98%;height: 90%;" src="./background1.jpg">
-               </div>
-               <div style="width: 45%;height: 85%;">
-                  <img class="ourserviceimg" style="width: 98%;height: 90%;" src="./background2.jpg">
-               </div>
-            </div>
-         </div>
-         <div class="our-service-content" style="display: flex;">
-            <div style="width: 49%;display: block;padding-left: 100px;">
-               <h2 style="color:#FF5E14 ;font-size: 35px;font-weight: bold;">
-                  Our Services
-               </h2>
-               <p style="padding-top: 30px;color:#4F4F4F;font-size: 20px;">
-                  Sunpin Solar develops energy projects from concept to asset, 
-                  committed to making clean energy universally accessible and available through innovative solutions and sustainable practices.
+         
+         <!-- Core Value Start-->
+         <div class="container">
+            <img src="./Solar_overlay.jpg" style="width:100%;">
+            <div class="content">
+              <h2 style="color:#0071BC ;font-size: 35px;font-weight: bold;">Core Values of Sunpin Solar</h2>
+              <p>
+               Sunpin Solar is built on a foundation of care, adventure, flexibility, diligence, collaboration, and sustainability.
+               From tackling challenging projects with confidence to fostering strong relationships and prioritizing environmental responsibility, 
+               our holistic approach ensures efficient and impactful solar development for a greener future.
                </p>
-               <br>
-               <div class="connect-with-expert;padding-left: 100px;">
-                  <a style="cursor: pointer;" class="btn-transparent-white" title="Connect with an expert | JEK Logistics Inc" onclick="connectExpert()">Connect with us</a>
-               </div>
             </div>
-            <div style="width: 30%;">
-               <ul style="color:#4F4F4F;font-size: 18px;font-weight: 300;list-style-type:none;">
-                  <li>
-                     <i class="fa fa-arrow-right" aria-hidden="true" style="color: #FF5E14;"></i>
-                     Offering comprehensive sustainability and clean energy strategies for corporations and building owners, 
-                     ensuring significant energy savings and long-term environmental benefits.
-                  </li>
-                  <br>
-                  <li>
-                     <i class="fa fa-arrow-right" aria-hidden="true" style="color: #FF5E14;"></i>
-                     Designing, developing, and constructing utility-scale power projects to create a more efficient, reliable, and sustainable power grid for a cleaner energy future.
-                  </li>
-                  <br>
-                  <li>
-                     <i class="fa fa-arrow-right" aria-hidden="true" style="color: #FF5E14;"></i>
-                     Providing investors with high-quality opportunities in power infrastructure, fostering sustainable growth and long-term energy solutions.
-                  </li>
-                  <br>
-                  <li>
-                     <i class="fa fa-arrow-right" aria-hidden="true" style="color: #FF5E14;"></i>
-                     Assisting landowners in generating consistent income through the leasing or sale of their property.
-                  </li>
-                  <br>
-               </ul>
-            </div>
-         </div>
-         <!-- Our Services End-->
+          </div>
+          <!-- Core Value End-->
+
+         
          <!-- Work with us Start -->
          <div class="our-services-img;" style="justify-content: center;">
             <div style="display: block;padding-left: 100px;">
-               <h2 style="color:#FF5E14 ;font-size: 35px;font-weight: bold;">
-                  Work with us
+               <h2 style="color:#0071BC ;font-size: 35px;font-weight: bold;">
+                  Our Leadership
                </h2>
                <br>
                <div style="display: flex;">
-                  <div style="width: 32%;height: 100%;">
-                     <img style="width: 98%;border-radius: 30px;" src="./landowner.jpg">
-                     <p style="padding-top: 20px;color:#4F4F4F;font-size: 20px;">
-                        Sunpin Solar partners with landowners across the country to develop solar projects that provide reliable income for years.
-                        <a href="#" style="color: #FF5E14;font-weight: bold;">Learn More</a>
-                     </p>
-                  </div>
                   <div style="width: 32%;height: 100%;">
                      <img style="width: 98%;border-radius: 30px;" src="./energybuyer.jpg">
                      <p style="padding-top: 20px;color:#4F4F4F;font-size: 20px;">
@@ -467,170 +442,10 @@
          </div>
          <br><br>
          <!-- Work with us End -->
-         <!-- Featured Projects Start-->
-         <div class="our-service-content" style="display: flex;">
-            <div style="width: 49%;display: block;padding-left: 100px;">
-               <h2 style="color:#FF5E14 ;font-size: 35px;font-weight: bold;">
-                  Featured Projects
-               </h2>
-               <p style="padding-top: 30px;color:#4F4F4F;font-size: 20px;">
-                  Sunpin Solar is actively advancing and constructing commercial, industrial, and utility-scale power projects, including solar and battery storage, across 
-                  CA, IL, MD, MA, and various
-                  <br>other states, with a pipeline exceeding 59GW.
-               </p>
-               <br>
-               <div class="connect-with-expert;padding-left: 100px;">
-                  <i class="fa fa-pencil-square-o" aria-hidden="true" style="color: #0071BC;"></i>
-                  &nbsp;
-                  <span style="color:#0071BC;font-size: 20px;font-weight: bold;">
-                  59 GW+ Project completed
-                  </span> 
-               </div>
-               <br>
-               <div class="connect-with-expert;padding-left: 100px;">
-                  <i class="fa fa-money" aria-hidden="true" style="color: #0071BC;"></i>
-                  &nbsp;
-                  <span style="color:#0071BC;font-size: 20px;font-weight: bold;">
-                  $5 Billion+ Project Financed 
-                  </span>
-               </div>
-               <br>
-               <div class="connect-with-expert;padding-left: 100px;">
-                  <a href="#" style="color: #FF5E14;font-size: 20px;font-weight: bold;">
-                  Explore Our Projects <span>&#10230;</span>
-                  </a>
-               </div>
-            </div>
-            <div style="width: 40%;">
-               <div style="width: 100%;">
-                  <a href="#">
-                  <img class="projectSlides" src="./project1.PNG" style="width:100%;;border-radius: 20px;">
-                  </a>
-                  <p class="projectDescription" style="padding-top: 20px;color:#0071BC;font-size: 20px;font-weight: bold;">
-                     <a href="#">
-                     Sun Powering Western Massachusetts Project – Tolland,Massachusetts,USA
-                     </a>
-                  </p>
-               </div>
-               <div>
-                  <a href="#">
-                  <img class="projectSlides" src="./project2.PNG" style="width:100%;display:none;border-radius: 20px;">
-                  </a>
-                  <p class="projectDescription" style="padding-top: 20px;color:#0071BC;font-size: 20px;font-weight: bold;display:none">
-                     <a href="#">
-                     East Acres Solar Project – Pittsfield,Massachusetts,USA
-                     </a>
-                  </p>
-               </div>
-               <div>
-                  <a href="#">
-                  <img class="projectSlides" src="./project3.PNG" style="width:100%;display:none;border-radius: 20px;">
-                  </a>
-                  <p class="projectDescription" style="padding-top: 20px;color:#0071BC;font-size: 20px;font-weight: bold;display:none">
-                     <a href="#">
-                     Austin Rooftop Solar Project – Chicago,Illinois,USA
-                     </a>
-                  </p>
-               </div>
-               <div>
-                  <a href="#">
-                  <img class="projectSlides" src="./project4.PNG" style="width:100%;display:none;border-radius: 20px;">
-                  </a>
-                  <p class="projectDescription" style="padding-top: 20px;color:#0071BC;font-size: 20px;font-weight: bold;display:none">
-                     <a href="#">
-                     Church Hill Solar Project – Church Hill,Maryland,USA
-                     </a>
-                  </p>
-               </div>
-               <div>
-                  <a href="#">
-                  <img class="projectSlides" src="./project5.PNG" style="width:100%;display:none;border-radius: 20px;">
-                  </a>
-                  <p class="projectDescription" style="padding-top: 20px;color:#0071BC;font-size: 20px;font-weight: bold;display:none">
-                     <a href="#">
-                     Titan Solar 1 Energy Project – Imperial County,California,USA
-                     </a>
-                  </p>
-               </div>
-               <div>
-                  <a href="#">
-                  <img class="projectSlides" src="./project6.PNG" style="width:100%;display:none;border-radius: 20px;">
-                  </a>
-                  <p class="projectDescription" style="padding-top: 20px;color:#0071BC;font-size: 20px;font-weight: bold;display:none">
-                     <a href="#">
-                     Colgreen North Shore Solar Power Plant – Riverside County,California,USA
-                     </a>
-                  </p>
-               </div>
-               <div class="w3-row-padding w3-section" style="display: flex;">
-                  <div class="w3-col s4">
-                     <img class="controller w3-opacity w3-hover-opacity-off" src="./project1.PNG" style="width:100%;cursor:pointer" onclick="currentDiv(1)">
-                  </div>
-                  <div class="w3-col s4">
-                     <img class="controller w3-opacity w3-hover-opacity-off" src="./project2.PNG" style="width:100%;cursor:pointer" onclick="currentDiv(2)">
-                  </div>
-                  <div class="w3-col s4">
-                     <img class="controller w3-opacity w3-hover-opacity-off" src="./project3.PNG" style="width:100%;cursor:pointer" onclick="currentDiv(3)">
-                  </div>
-                  <div class="w3-col s4">
-                     <img class="controller w3-opacity w3-hover-opacity-off" src="./project4.PNG" style="width:100%;cursor:pointer" onclick="currentDiv(4)">
-                  </div>
-                  <div class="w3-col s4">
-                     <img class="controller w3-opacity w3-hover-opacity-off" src="./project5.PNG" style="width:100%;cursor:pointer" onclick="currentDiv(5)">
-                  </div>
-                  <div class="w3-col s4">
-                     <img class="controller w3-opacity w3-hover-opacity-off" src="./project6.PNG" style="width:100%;cursor:pointer" onclick="currentDiv(6)">
-                  </div>
-               </div>
-            </div>
-         </div>
-         <!-- Featured Projects End-->
-         <!-- Recent News,Blog Start-->
-         <div style="width: auto;padding-left: 100px;">
-            <div style="width: auto;display: block;">
-               <h2 style="color:#FF5E14 ;font-size: 35px;font-weight: bold;">
-                  Recent News
-               </h2>
-               <marquee width="auto" direction="right" height="100px" loop="-1" onmouseover="this.stop();" onmouseout="this.start();">
-                  <div style="display: flex;">
-                     <img src="./cision.png" style="width: 260px;height: 51px;">&nbsp;&nbsp;&nbsp;&nbsp;
-                     <img src="./cleanenergy.jpg" style="width: 260px;height: 51px;">&nbsp;&nbsp;&nbsp;&nbsp;
-                     <img src="./pvmagazine.jpg" style="width: 260px;height: 51px;">&nbsp;&nbsp;&nbsp;&nbsp;
-                     <img src="./seia.png" style="width: 260px;height: 51px;">&nbsp;&nbsp;&nbsp;&nbsp;
-                     <img src="./solarbuilder.jpg" style="width: 260px;height: 51px;">&nbsp;&nbsp;&nbsp;&nbsp;
-                     <img src="./solarindustry.png" style="width: 260px;height: 51px;">&nbsp;&nbsp;&nbsp;&nbsp;
-                     <img src="./solarpowerworld.png" style="width: 260px;height: 51px;">&nbsp;&nbsp;&nbsp;&nbsp;
-                     <img src="./utility.png" style="width: 260px;height: 51px;">&nbsp;&nbsp;&nbsp;&nbsp;
-                  </div>
-               </marquee>
-            </div>
-         </div>
-         <!-- Recent News,Blog End-->
-         <!-- Trade Organizations Start-->
-         <div style="width: auto;padding-left: 100px;">
-            <div style="width: auto;display: block;">
-               <h2 style="color:#FF5E14 ;font-size: 35px;font-weight: bold;">
-                  Trade Organizations
-               </h2>
-               <marquee width="auto" direction="right" height="100px" loop="-1" onmouseover="this.stop();" onmouseout="this.start();">
-                  <div style="display: flex;">
-                     <img src="./directenergy.jpg">&nbsp;&nbsp;&nbsp;&nbsp;
-                     <img src="./pittsfield.png">&nbsp;&nbsp;&nbsp;&nbsp;
-                     <img src="./agawam.jpg">&nbsp;&nbsp;&nbsp;&nbsp;
-                     <img src="./greenville.png">&nbsp;&nbsp;&nbsp;&nbsp;
-                     <img src="./kewanee.png">&nbsp;&nbsp;&nbsp;&nbsp;
-                     <img src="./longmeadow.png">&nbsp;&nbsp;&nbsp;&nbsp;
-                     <img src="./directenergy.jpg">&nbsp;&nbsp;&nbsp;&nbsp;
-                     <img src="./pittsfield.png">&nbsp;&nbsp;&nbsp;&nbsp;
-                     <img src="./agawam.jpg">&nbsp;&nbsp;&nbsp;&nbsp;
-                     <img src="./greenville.png">&nbsp;&nbsp;&nbsp;&nbsp;
-                     <img src="./kewanee.png">&nbsp;&nbsp;&nbsp;&nbsp;
-                     <img src="./longmeadow.png">&nbsp;&nbsp;&nbsp;&nbsp;
-                  </div>
-               </marquee>
-            </div>
-         </div>
-         <!-- Trade Organizations End-->
+
+
+         
+        
       </div>
       <script>
          document.querySelector('.hamburger').addEventListener('click', function() {
